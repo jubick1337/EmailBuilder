@@ -10,6 +10,9 @@ namespace EmailBuilder
     {
         static void Main(string[] args)
         {
+            StateBuilder builder = new StateBuilder();
+            var mail = builder.AddReceiver("usu.courses@gmail.com").AddBody("Eto Novikov Matvey").AddTheme("Builder");
+            Console.WriteLine(mail.Build());
         }
     }
 }
